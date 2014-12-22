@@ -10,12 +10,12 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start(){
-		/*
+
 		for (int z = -5; z < 5; z++) {
 			for (int x = -5; x < 5; x++) {
 				Instantiate(brick, new Vector3(0.5f*x,0.1f,0.5f*z), Quaternion.identity);
 			}
-		}*/
+		}
 		}
 
 	IEnumerator PlaceBlock()
@@ -55,8 +55,8 @@ public class CameraController : MonoBehaviour {
 		//print(Input.mousePosition);
 		//vector3 position = Input.mousePosition;
 		//float movehorizontal = Input.GetAxis("Horizontal");
-		float movevertical = Input.GetAxis ("Vertical");
-		Vector3 movement = new Vector3 (0.0f, 0.0f,movevertical);
+		float moveforward = Input.GetAxis ("Vertical");
+		Vector3 movement = new Vector3 (0.0f, 0.0f,moveforward);
 		transform.Translate(movement * Time.deltaTime);
 
 
